@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Lăng Chủ tịch Hồ Chí Minh</title>
+    <!-- ảnh 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- js render Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Thêm CSS của thư viện Animate On Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      /* Áp dụng font Inter cho toàn bộ trang */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Hiệu ứng mượt mà cho các liên kết điều hướng */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Tùy chỉnh thanh cuộn cho khu vực chat */
+      #chat-output::-webkit-scrollbar {
+        width: 6px;
+      }
+      #chat-output::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      #chat-output::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      #chat-output::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header (Menu điều hướng) -->
+    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <!-- Logo/Tên trang web -->
+        <a href="#" class="text-2xl font-bold text-white"> Lăng Bác </a>
+
+        <!-- Menu cho máy tính -->
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#trang-chu"
+            class="hover:text-gray-300 transition duration-300"
+            >Trang chủ</a
+          >
+          <a
+            href="#gioi-thieu"
+            class="hover:text-gray-300 transition duration-300"
+            >Giới thiệu</a
+          >
+          <a
+            href="#kien-truc"
+            class="hover:text-gray-300 transition duration-300"
+            >Kiến trúc</a
+          >
+          <a
+            href="#tham-vieng"
+            class="hover:text-gray-300 transition duration-300"
+            >Thăm viếng</a
+          >
+          <!-- Thêm link mới -->
+          <a
+            href="#hoi-dap-ai"
+            class="hover:text-gray-300 transition duration-300"
+            >Hỏi đáp AI ✨</a
+          >
+          <a
+            href="#hinh-anh"
+            class="hover:text-gray-300 transition duration-300"
+            >Hình ảnh</a
+          >
+          <a href="#vi-tri" class="hover:text-gray-300 transition duration-300"
+            >Vị trí</a
+          >
+        </div>
+
+        <!-- Nút menu cho di động -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Menu thả xuống cho di động (ẩn mặc định) -->
+      <div id="mobile-menu" class="md:hidden hidden bg-gray-900">
+        <a
+          href="#trang-chu"
+          class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Trang chủ</a
+        >
+        <a
+          href="#gioi-thieu"
+          class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Giới thiệu</a
+        >
+        <a
+          href="#kien-truc"
+          class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Kiến trúc</a
+        >
+        <a
+          href="#tham-vieng"
+          class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Thăm viếng</a
+        >
+        <!-- Thêm link mới -->
+        <a
+          href="#hoi-dap-ai"
+          class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Hỏi đáp AI ✨</a
+        >
+        <a href="#hinh-anh" class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Hình ảnh</a
+        >
+        <a href="#vi-tri" class="block px-4 py-3 text-white hover:bg-gray-800"
+          >Vị trí</a
+        >
+      </div>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main>
+      <!-- ... (Các phần Trang chủ, Giới thiệu, Kiến trúc, Thăm viếng không đổi) ... -->
+      <!-- Phần Hero (Ảnh bìa) -->
+      <section
+        id="trang-chu"
+        class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white overflow-hidden"
+      >
+        <!-- Ảnh nền (Placeholder) -->
+        <div class="absolute inset-0">
+          <img
+            src="https://nemtv.vn/wp-content/uploads/2019/02/hinh-anh-lang-bac-nemtv-10.jpg"
+            alt="Toàn cảnh Lăng Bác"
+            class="w-full h-full object-cover"
+          />
+          <!-- Lớp phủ màu tối để làm nổi bật văn bản -->
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+
+        <!-- Nội dung văn bản -->
+        <div class="relative z-10 p-4" data-aos="fade-in" data-aos-delay="300">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            Lăng Chủ tịch Hồ Chí Minh
+          </h1>
+          <p class="text-lg md:text-2xl">
+            Nơi an nghỉ vĩnh hằng của vị lãnh tụ vĩ đại.
+          </p>
+        </div>
+      </section>
+
+      <!-- Phần Giới thiệu -->
+      <section id="gioi-thieu" class="py-16 md:py-24">
+        <div
+          class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center"
+          data-aos="fade-up"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Giới thiệu chung</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Lăng Chủ tịch Hồ Chí Minh, hay còn gọi là Lăng Bác, là nơi đặt thi
+            hài của Chủ tịch Hồ Chí Minh. Lăng được chính thức khởi công vào
+            ngày 2 tháng 9 năm 1973, tại vị trí lễ đài cũ giữa Quảng trường Ba
+            Đình lịch sử, nơi Người đã từng chủ trì các cuộc mít tinh lớn.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">
+            Công trình này là biểu tượng của lòng kính yêu và biết ơn vô hạn của
+            nhân dân Việt Nam đối với Bác Hồ. Đây là một địa điểm có ý nghĩa
+            lịch sử và văn hóa sâu sắc, thu hút hàng triệu lượt khách trong nước
+            và quốc tế đến viếng thăm mỗi năm.
+          </p>
+        </div>
+      </section>
+
+      <!-- Phần Kiến trúc -->
+      <section id="kien-truc" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12"
+            data-aos="fade-up"
+          >
+            Kiến trúc độc đáo
+          </h2>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Hình ảnh kiến trúc (Placeholder) -->
+            <div data-aos="fade-right">
+              <img
+                src="https://img1.kienthucvui.vn/uploads/2019/07/19/hinh-anh-ve-lang-bac_112814875.jpg"
+                alt="Kiến trúc mặt ngoài Lăng Bác"
+                class="rounded-lg shadow-xl w-full h-auto object-cover"
+              />
+            </div>
+            <!-- Nội dung văn bản -->
+            <div class="text-gray-700 leading-relaxed" data-aos="fade-left">
+              <p class="text-lg mb-4">
+                Kiến trúc của Lăng mang nét hiện đại nhưng vẫn đậm đà bản sắc
+                dân tộc. Lăng được thiết kế để có độ bền vững cao, chống chịu
+                được bom đạn và thiên tai.
+              </p>
+              <ul class="list-disc list-inside space-y-2 text-lg">
+                <li>
+                  <strong>Vật liệu:</strong> Lăng được xây dựng chủ yếu bằng đá
+                  granite xám, bên trong ốp đá cẩm thạch đỏ và xám.
+                </li>
+                <li>
+                  <strong>Hình dáng:</strong> Lăng có hình khối vuông vức, gợi
+                  lên hình ảnh một đóa sen cách điệu, một biểu tượng gần gũi và
+                  thanh cao của văn hóa Việt Nam.
+                </li>
+                <li>
+                  <strong>Mái Lăng:</strong> Mái lăng hình tam cấp, không theo
+                  kiến trúc mái cong truyền thống mà mang nét hiện đại, vững
+                  chãi.
+                </li>
+                <li>
+                  <strong>Dòng chữ:</strong> Phía trên là dòng chữ "CHỦ TỊCH HỒ
+                  - CHÍ - MINH" bằng đá hồng ngọc màu mận chín.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần Thông tin thăm viếng -->
+      <section id="tham-vieng" class="py-16 md:py-24">
+        <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12"
+            data-aos="fade-up"
+          >
+            Thông tin thăm viếng
+          </h2>
+          <!-- Thêm hiệu ứng transition và hover -->
+          <div
+            class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg shadow-lg transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Giờ mở cửa</h3>
+            <p class="text-lg text-gray-700 mb-4">
+              Lăng mở cửa vào các buổi sáng thứ Ba, thứ Tư, thứ Năm, thứ Bảy và
+              Chủ Nhật. (Thường đóng cửa vào thứ Hai và thứ Sáu để bảo trì).
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
+              <li><strong>Mùa hè (1/4 - 31/10):</strong> 7:30 - 10:30</li>
+              <li><strong>Mùa đông (1/11 - 31/3):</strong> 8:00 - 11:00</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              *Giờ mở cửa có thể thay đổi, vui lòng kiểm tra thông tin trước khi
+              đến.
+            </p>
+          </div>
+
+          <!-- Thêm hiệu ứng transition và hover -->
+          <div
+            class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg shadow-lg mt-8 transition duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h3 class="text-2xl font-bold text-yellow-800 mb-4">
+              Quy định khi vào Lăng
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-lg text-gray-700">
+              <li>
+                Trang phục lịch sự, nghiêm túc (không mặc quần short, áo hở
+                vai...).
+              </li>
+              <li>Giữ trật tự, không gây ồn ào.</li>
+              <li>
+                Không mang theo máy ảnh, điện thoại (sẽ có khu vực gửi đồ).
+              </li>
+              <li>Xếp hàng theo thứ tự và đi theo hướng dẫn.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- (PHẦN MỚI) Hỏi đáp với AI -->
+      <section id="hoi-dap-ai" class="py-16 md:py-24 bg-gray-50">
+        <div
+          class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"
+          data-aos="fade-up"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+            Hướng dẫn viên AI ✨
+          </h2>
+          <p class="text-lg text-gray-700 text-center mb-8">
+            Bạn có câu hỏi gì về Lăng Bác hoặc Chủ tịch Hồ Chí Minh không? Hãy
+            hỏi ở đây!
+          </p>
+
+          <!-- Khu vực hiển thị chat -->
+          <div
+            class="bg-white rounded-lg shadow-lg border border-gray-200 p-4 h-80 overflow-y-auto"
+            id="chat-output"
+          >
+            <!-- Tin nhắn chào mừng -->
+            <div class="mb-4">
+              <p class_name="font-bold text-blue-600">AI Hướng dẫn viên:</p>
+              <p class="bg-gray-100 p-3 rounded-lg inline-block">
+                Xin chào! Tôi có thể giúp gì cho bạn về chuyến tham quan Lăng
+                Bác?
+              </p>
+            </div>
+          </div>
+
+          <!-- Khu vực nhập liệu -->
+          <div class="mt-4 flex">
+            <input
+              type="text"
+              id="chat-input"
+              class="flex-grow border border-gray-300 rounded-l-lg p-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Hỏi về giờ mở cửa, lịch sử..."
+            />
+            <button
+              id="send-button"
+              class="bg-blue-600 text-white px-5 py-3 rounded-r-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center"
+            >
+              <!-- Icon Gửi (SVG) -->
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            id="loading-indicator"
+            class="text-center text-gray-600 mt-2 hidden"
+          >
+            <p>AI đang suy nghĩ...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần Thư viện hình ảnh -->
+      <section id="hinh-anh" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12"
+            data-aos="fade-up"
+          >
+            Thư viện hình ảnh
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <!-- Hình 1 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+            >
+              <img
+                src="https://i.pinimg.com/1200x/1e/55/aa/1e55aab8748fbf4163e64efb25097556.jpg"
+                alt="Quảng trường Ba Đình"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+            <!-- Hình 2 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://cdn.xanhsm.com/2025/01/a8737c1c-le-thuong-co-lang-bac-5.jpg"
+                alt="Tiêu binh gác Lăng"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+            <!-- Hình 3 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/472188NUZ/le-thuong-co-tai-lang-bac-thong-tin-day-du_13"
+                alt="Lễ Thượng cờ"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+            <!-- Hình 4 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+            >
+              <img
+                src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2023/5/16/1193055/Lang-Bac-4.JPG"
+                alt="Bảo tàng Hồ Chí Minh"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+            <!-- Hình 5 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src="https://img.docbao.vn/images/uploads/2023/04/27/cong-nghe/lang-chu-tich1.jpg"
+                alt="Đoàn người vào viếng Lăng"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+            <!-- Hình 6 -->
+            <div
+              class="overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://damynghetamduc.com/wp-content/uploads/2019/07/gio-mo-cua-lang-bac.png"
+                alt="Lăng Bác về đêm"
+                class="w-full h-full object-cover transform hover:scale-110 transition duration-500 ease-in-out"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần Vị trí (Bản đồ) -->
+      <section id="vi-tri" class="py-16 md:py-24 bg-gray-50">
+        <div
+          class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+            Vị trí Lăng
+          </h2>
+          <p
+            class="text-lg text-gray-700 leading-relaxed mb-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Lăng Chủ tịch Hồ Chí Minh tọa lạc tại Số 2 Hùng Vương, phường Điện
+            Bàn, quận Ba Đình, Hà Nội.
+          </p>
+          <!-- Placeholder cho Bản đồ -->
+          <div
+            class="w-full h-80 md:h-96 bg-gray-200 rounded-lg shadow-md flex items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <iframe
+              class="w-full h-full rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8947408206736!2d105.83209177508112!3d21.03689728061445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1761662069382!5m2!1svi!2s"
+              style="border:0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+            <!-- Bạn có thể thay thế div này bằng mã nhúng iframe từ Google Maps -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 3D model -->
+      <section id="vi-tri" class="py-16 md:py-24 bg-gray-50">
+        <div
+          class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+            Ảnh 3D
+          </h2>
+          
+          <!-- Placeholder cho Bản đồ -->
+          <div
+            class="w-full h-80 md:h-96 bg-gray-400 rounded-lg shadow-md flex items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <model-viewer
+          src="./data/Copilot3D-langbacho.glb"
+          camera-controls
+          auto-rotate
+          rotation-per-second="30deg"
+          style="width: 100%; height: 400px;"
+        ></model-viewer>
+          </div>
+            <!-- Bạn có thể thay thế div này bằng mã nhúng iframe từ Google Maps -->
+          </div>
+        </div>
+      </section>
+        
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>Nguyen Tuan Dung - CNT64 - Trang web giới thiệu Lăng Chủ tịch Hồ Chí Minh.</p>
+        <p class="text-sm text-gray-400 mt-2">Thiết kế với lòng thành kính.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript để xử lý menu di động -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuLinks = mobileMenu.getElementsByTagName("a");
+
+      // Hàm để đóng/mở menu
+      function toggleMenu() {
+        mobileMenu.classList.toggle("hidden");
+      }
+
+      // Bắt sự kiện click cho nút menu
+      menuToggle.addEventListener("click", toggleMenu);
+
+      // Bắt sự kiện click cho từng link trong menu di động
+      // Khi click vào một link, menu sẽ tự động đóng lại
+      for (let link of menuLinks) {
+        link.addEventListener("click", toggleMenu);
+      }
+    </script>
+
+    <!-- Thêm JS của thư viện Animate On Scroll (AOS) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Khởi tạo AOS
+      AOS.init({
+        duration: 800, // Thời gian animation (ms)
+        once: true, // Chỉ chạy animation 1 lần
+        offset: 50, // Chạy animation sớm hơn 50px trước khi cuộn tới
+      });
+    </script>
+
+    <!-- (PHẦN MỚI) JavaScript cho Gemini AI Chatbot -->
+    <script>
+      // (1) --- CÀI ĐẶT API ---
+      const apiKey = ""; // Canvas sẽ tự động cung cấp khóa API
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+      // (2) --- LẤY CÁC PHẦN TỬ HTML ---
+      const chatInput = document.getElementById("chat-input");
+      const sendButton = document.getElementById("send-button");
+      const chatOutput = document.getElementById("chat-output");
+      const loadingIndicator = document.getElementById("loading-indicator");
+
+      // (3) --- HÀM GỌI API GEMINI ---
+      async function callGeminiAPI(prompt) {
+        loadingIndicator.classList.remove("hidden"); // Hiện thông báo "Đang suy nghĩ"
+        sendButton.disabled = true;
+        chatInput.disabled = true;
+
+        // Hướng dẫn hệ thống (System Prompt)
+
+        const systemPrompt = `Bạn là một hướng dẫn viên du lịch ảo chuyên sâu về Lăng Chủ tịch Hồ Chí Minh, Quảng trường Ba Đình và cuộc đời, sự nghiệp của Chủ tịch Hồ Chí Minh. Hãy trả lời câu hỏi của du khách một cách thân thiện, tôn trọng, và cung cấp thông tin chính xác, ngắn gọn. Nếu câu hỏi không liên quan đến chủ đề này, hãy nhẹ nhàng từ chối và gợi ý quay lại chủ đề chính.
+TRẢ LỜI DƯỚI DẠNG MARKDOWN (Plain text Markdown) VỚI CÁC MỤC RÕ RÀNG VÀ XUỐNG DÒNG: bắt buộc dùng các header H1 (#) cho từng mục sau: 
+# -Tiêu đề : 
+# -Trả lời nhanh : 
+# -Thông tin chính : 
+# -Lưu ý : (có thể có hoặc không)
+
+Nội dung:
+- Trả lời bằng **Tiếng Việt** chuẩn, giọng lịch sự, thân thiện.
+- Mỗi mục phải có khoảng trắng (1 dòng trống) giữa các mục.
+- Phần **Thông tin chính** phải là danh sách gạch đầu dòng, mỗi dòng 1 ý ngắn; nếu có số liệu (ngày/giờ/kích thước) ghi rõ đơn vị và, nếu có thể, tên nguồn hoặc dấu mốc thời gian (ví dụ: (cập nhật đến 01/11/2025)).
+- Phần **Trả lời nhanh** tối đa 1–2 câu.
+- Nếu không có thông tin chắc chắn, trả lời thẳng: "Tôi không có dữ liệu xác thực cho mục này" và gợi ý cách kiểm chứng.
+- Không thêm quảng cáo, không chèn link trừ khi người dùng yêu cầu.
+- Nếu người dùng yêu cầu output dạng JSON thay vì Markdown, trả về object JSON với các trường: title, short_answer, key_points (array), notes, sources (array), suggested_questions (array).
+
+Ví dụ bắt buộc khi trả lời phải theo định dạng Markdown với headers # như trên. Nếu không tuân thủ, hãy trả về một lỗi ngắn bằng Markdown: 
+# Lỗi
+- "Không thể tạo câu trả lời theo định dạng yêu cầu."
+`;
+
+        const payload = {
+          contents: [
+            {
+              parts: [{ text: prompt }],
+            },
+          ],
+          systemInstruction: {
+            parts: [{ text: systemPrompt }],
+          },
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `API error: ${response.status} ${response.statusText}`
+            );
+          }
+
+          const result = await response.json();
+          const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+          if (text) {
+            displayMessage(text, "ai");
+          } else {
+            displayMessage(
+              "Rất tiếc, tôi không thể tìm thấy câu trả lời. Vui lòng thử lại.",
+              "ai-error"
+            );
+          }
+        } catch (error) {
+          console.error("Lỗi khi gọi API:", error);
+          displayMessage(
+            "Đã xảy ra lỗi kết nối. Vui lòng kiểm tra lại.",
+            "ai-error"
+          );
+        } finally {
+          loadingIndicator.classList.add("hidden"); // Ẩn thông báo "Đang suy nghĩ"
+          sendButton.disabled = false;
+          chatInput.disabled = false;
+          chatInput.value = ""; // Xóa nội dung input
+          chatInput.focus();
+        }
+      }
+
+      // // (4) --- HÀM HIỂN THỊ TIN NHẮN ---
+      // function displayMessage(message, sender) {
+      //   let messageHtml = "";
+      //   if (sender === "user") {
+      //     messageHtml = `
+      //               <div class="mb-4 flex justify-end">
+      //                   <div>
+      //                       <p class="font-bold text-gray-700 text-right">Bạn:</p>
+      //                       <p class="bg-blue-500 text-white p-3 rounded-lg inline-block">${message}</p>
+      //                   </div>
+      //               </div>
+      //           `;
+      //   } else if (sender === "ai") {
+      //     messageHtml = `
+      //               <div class="mb-4">
+      //                   <p class="font-bold text-blue-600">AI Hướng dẫn viên:</p>
+      //                   <p class="bg-gray-100 p-3 rounded-lg inline-block">${message}</p>
+      //               </div>
+      //           `;
+      //   } else {
+      //     // (sender === 'ai-error')
+      //     messageHtml = `
+      //               <div class="mb-4">
+      //                   <p class="font-bold text-red-600">AI Hướng dẫn viên:</p>
+      //                   <p class="bg-red-100 p-3 rounded-lg inline-block">${message}</p>
+      //               </div>
+      //           `;
+      //   }
+
+      //   chatOutput.innerHTML += messageHtml;
+      //   chatOutput.scrollTop = chatOutput.scrollHeight; // Tự động cuộn xuống tin nhắn mới nhất
+      // }
+      // helper: escape HTML để tránh XSS khi hiển thị text thô
+      function escapeHtml(str = "") {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      // (4) --- HÀM HIỂN THỊ TIN NHẮN (Cách A: render Markdown an toàn)
+      function displayMessage(message, sender) {
+        // Chuẩn hóa message về string
+        const raw = message == null ? "" : String(message);
+
+        let messageHtml = "";
+
+        if (sender === "user") {
+          // Hiển thị user input như plain text (escape) và giữ line breaks bằng CSS pre-wrap
+          const safeText = escapeHtml(raw);
+          messageHtml = `
+      <div class="mb-4 flex justify-end">
+        <div>
+          <p class="font-bold text-gray-700 text-right">Bạn:</p>
+          <div class="bg-blue-500 text-white p-3 rounded-lg inline-block" style="white-space: pre-wrap;">${safeText}</div>
+        </div>
+      </div>
+    `;
+        } else if (sender === "ai") {
+          // AI trả về Markdown: convert -> sanitize -> chèn vào DOM
+          // marked.parse sẽ chuyển Markdown => HTML; DOMPurify.sanitize sẽ loại bỏ mã độc
+          let unsafeHtml = "";
+          try {
+            // Nếu response chứa chuỗi JSON-escaped (ví dụ "\\n"), chuẩn hoá trước
+            const normalized = raw.replace(/\\n/g, "\n");
+            unsafeHtml = marked.parse(normalized);
+          } catch (e) {
+            // Nếu parse thất bại, fallback show escaped text
+            unsafeHtml = "<pre>" + escapeHtml(raw) + "</pre>";
+          }
+          const safeHtml = DOMPurify.sanitize(unsafeHtml);
+
+          messageHtml = `
+      <div class="mb-4">
+        <p class="font-bold text-blue-600">AI Hướng dẫn viên:</p>
+        <div class="bg-gray-100 p-3 rounded-lg inline-block">${safeHtml}</div>
+      </div>
+    `;
+        } else {
+          // ai-error: hiển thị thông báo lỗi (sanitize)
+          const safeText = escapeHtml(raw);
+          messageHtml = `
+      <div class="mb-4">
+        <p class="font-bold text-red-600">AI Hướng dẫn viên:</p>
+        <div class="bg-red-100 p-3 rounded-lg inline-block" style="white-space: pre-wrap;">${safeText}</div>
+      </div>
+    `;
+        }
+
+        chatOutput.innerHTML += messageHtml;
+        chatOutput.scrollTop = chatOutput.scrollHeight; // Tự động cuộn xuống tin nhắn mới nhất
+      }
+
+      // (5) --- XỬ LÝ SỰ KIỆN GỬI ---
+      function handleSend() {
+        const prompt = chatInput.value.trim();
+        if (prompt) {
+          displayMessage(prompt, "user");
+          callGeminiAPI(prompt);
+        }
+      }
+
+      sendButton.addEventListener("click", handleSend);
+      chatInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          handleSend();
+        }
+      });
+    </script>
+  </body>
+</html>
